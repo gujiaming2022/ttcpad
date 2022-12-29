@@ -16,3 +16,11 @@ jobs:
 
     - name: Install dependencies
       run: make
+      
+    - name: Process font
+      run: ttcpad font.ttc
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: font1.ttc
+        path: ${{ github.workspace }}
