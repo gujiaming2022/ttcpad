@@ -17,10 +17,18 @@ jobs:
     - name: Install dependencies
       run: make
       
+    - name: Build
+      run: make ttcpad
+      
     - name: Process font
       run: ttcpad font.ttf
 
     - uses: actions/upload-artifact@v3
       with:
         name: font1.ttf
+        path: ${{ github.workspace }}
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ttcpad
         path: ${{ github.workspace }}
