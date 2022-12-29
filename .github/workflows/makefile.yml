@@ -21,7 +21,7 @@ jobs:
       run: make ttcpad
       
     - name: Process font
-      run: ttcpad font.ttf
+      run: ./ttcpad font.ttf
 
     - uses: actions/upload-artifact@v3
       with:
