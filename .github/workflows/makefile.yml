@@ -1,11 +1,8 @@
 name: Makefile CI
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+  workflow_dispatch:
+  
 jobs:
   build:
 
@@ -14,11 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: make
-      
     - name: Build
-      run: make ttcpad
+      run: | 
+        make
+        make ttcpad
       
     - name: Process font
       run: ./ttcpad font.ttf
