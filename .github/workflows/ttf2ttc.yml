@@ -1,0 +1,20 @@
+name: Unite Fonts
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Unite
+      run: .\ttf2ttc\UniteTTC.exe
+      
+    - uses: actions/upload-artifact@v3
+      with:
+        name: font.ttc
+        path: ${{ github.workspace }}\ttf2ttc
