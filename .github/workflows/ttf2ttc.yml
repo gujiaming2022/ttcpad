@@ -1,8 +1,6 @@
 name: Unite Fonts
 
-on:
-  workflow_dispatch:
-  
+
 jobs:
   build:
 
