@@ -12,9 +12,4 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Unite
-      run: .\ttf2ttc\UniteTTC.exe font.ttc JetBrainsMono-Bold.ttf JetBrainsMono-Bold-Italic.ttf JetBrainsMono-ExtraBold.ttf JetBrainsMono-ExtraBold-Italic.ttf JetBrainsMono-Italic.ttf JetBrainsMono-Medium.ttf JetBrainsMono-Medium-Italic.ttf JetBrainsMono-Regular.ttf
-      
-    - uses: actions/upload-artifact@v3
-      with:
-        name: font.ttc
-        path: ${{ github.workspace }}\ttf2ttc
+      run: .\ttf2ttc\UniteTTC.exe font.ttc time2.ttf
