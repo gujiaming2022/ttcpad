@@ -12,9 +12,10 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Unite
-      run: .\ttf2ttc\unitettc.exe
+      run: .\ttf2ttc\unitettc.exe 222.ttc time2.ttf
 
     - uses: actions/upload-artifact@v3
       with:
-        name: time2.ttf 111.ttc
+        name: 222.ttc
+
         path: ${{ github.workspace }}
