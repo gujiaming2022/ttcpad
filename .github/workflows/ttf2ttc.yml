@@ -13,3 +13,8 @@ jobs:
 
     - name: Unite
       run: .\ttf2ttc\allunitettc.exe
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: font1.ttc
+        path: ${{ github.workspace }}
